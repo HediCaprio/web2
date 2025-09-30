@@ -1,4 +1,4 @@
-import { Router, Request ,Response } from "express"
+import { Router, Request ,Response, NextFunction } from "express"
 
 export const filmRouter = Router();
 
@@ -32,6 +32,17 @@ const films = [
   }
 ];
 
+let counterGet = 0;
+
+filmRouter.use((req:Request, _res:Response, next : NextFunction)=>{
+  if(req.method == "GET"){
+    counterGet++;
+    console.log(`GET counter : ${counterGet}`);
+  }
+  next();
+})
+
 filmRouter.get("/", (_req:Request ,res:Response) => {
   res.json(films);
 });
+
