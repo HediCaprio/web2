@@ -1,5 +1,5 @@
 import "./App.css";
-import sound from "./assets/sounds/Werenoi La League Clip Officiel.mp3";
+import sound from "./assets/sounds/Infecticide-11-Pizza-Spinoza.mp3";
 import logo from "./assets/images/js-logo.png";
 
 function App() {
@@ -32,7 +32,7 @@ const Main = () => {
       <p>My HomePage</p>
       <p>
         Because we love JS, you can also click on the header to stop / start the
-        music ;
+        music ; )
       </p>
       <audio id="audioPlayer" controls autoPlay>
         <source src={sound} type="audio/mpeg" />
